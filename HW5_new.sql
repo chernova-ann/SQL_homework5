@@ -17,12 +17,8 @@ ALTER TABLE users CHANGE updated_at updated_at DATETIME;
 --что будет отдельная табличка с продукцией products, а в таблице складских запасов storehouses_products будет уже ссылка на первичный ключ по id).
 
 --Решение может быть таким
-SELECT
-  *
-FROM
-  storehouses_products
-ORDER BY
-  value = 0, value; 
+SELECT*FROM storehouses_products 
+ORDER BY value = 0, value; 
 --value = 0 Здесь проверяется условие. Если value равно 0, то возвращается булево значение 1. Если не равно 0. 
 --Затем происходит сортировка стандартная по возрастанию по результатм проверки условия. Сначала нули, затем единицы.
 
